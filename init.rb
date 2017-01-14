@@ -21,9 +21,7 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-require_dependency 'autowatch_hooks'
-
-Redmine::Plugin.register :autowatch do
+Redmine::Plugin.register :redmine_autowatch do
   name 'AutoWatch plugin'
   author 'University of Trier - ZIMK - Andreas Litt, Matthias Lohr'
   description 'Configure users to become a watcher for all new tickets'
@@ -36,3 +34,5 @@ Redmine::Plugin.register :autowatch do
              role_id: 0
            })
 end
+
+require_dependency 'autowatch_hooks'
